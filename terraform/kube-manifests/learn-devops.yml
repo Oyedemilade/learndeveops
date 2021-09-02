@@ -19,7 +19,7 @@ spec:
           image: dterraform.azurecr.io/learndevops1/learn-devops:v1
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 8080
       imagePullSecrets:   # Update Image Pull Secret Name we creted
         - name: dterraform-secret
 # To schedule pods on based on NodeSelectors
