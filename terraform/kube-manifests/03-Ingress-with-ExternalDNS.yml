@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: nginxapp1-ingress-service
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: wassupafrica.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: learn-devops-clusterip-service
+          servicePort: 8080
