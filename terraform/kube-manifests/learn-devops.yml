@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learn-devops-deployment
+  labels:
+    app: learn-devops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: learn-devops
+  template:
+    metadata:
+      labels:
+        app: learn-devops
+    spec:
+      containers:
+        - name: learn-devops
+          image: dterraform.azurecr.io/learndevops1/learn-devops:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+      imagePullSecrets:   # Update Image Pull Secret Name we creted
+        - name: dterraform-secret
+# To schedule pods on based on NodeSelectors
+      nodeSelector:
+        app: system-apps
+
+
