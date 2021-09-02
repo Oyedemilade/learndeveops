@@ -1,0 +1,8 @@
+{
+  "tenantId": "15b62e3d-aa75-4304-b314-0141029b1f88",
+  "subscriptionId": "362c1adc-1a55-4ac2-8047-ab427a22d41e",
+  "resourceGroup": "titans-RG1-dev1",
+  "useManagedIdentityExtension": true,
+  "userAssignedIdentityID": "9482aeb9-bae4-4d2f-a0ad-890d641b9d88"
+}
+
